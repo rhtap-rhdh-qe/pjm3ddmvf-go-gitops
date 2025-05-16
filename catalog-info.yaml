@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: pjm3ddmvf-go-gitops
+  description: This is GitOps manifest for pjm3ddmvf-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: tssc/gitops=pjm3ddmvf-go
+    backstage.io/kubernetes-id: pjm3ddmvf-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: pjm3ddmvf-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:pjm3ddmvf-go

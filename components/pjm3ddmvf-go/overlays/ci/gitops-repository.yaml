@@ -1,0 +1,6 @@
+apiVersion: "pipelinesascode.tekton.dev/v1alpha1"
+kind: Repository
+metadata:
+  name: pjm3ddmvf-go-gitops-repository
+spec:
+  url: https://github.com/rhtap-rhdh-qe/pjm3ddmvf-go-gitops
